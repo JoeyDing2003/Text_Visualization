@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecological Civilization Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+        }
+
+        .card-deck .card {
+            min-width: 220px;
+        }
+
+        .card-body img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 px-4">
+                <h1 class="mt-4">Dashboard</h1>
+
+                <!-- Statistic Cards -->
+                <div class="card-deck mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Theme River</h5>
+                            <p class="card-text">Worldwide users' interest in five representative ecological topics over
+                                the past 12 months. Data from
+                                <a href="https://trends.google.com/trends/">Google Trends</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Wordcloud</h5>
+                            <p class="card-text">An worldcould including keywords in Ecological Civilization, generated
+                                via
+                                <a href='https://edwordle.net/'>EdWordle</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Attitude Map</h5>
+                            <p class="card-text">Regional attitudes towards prioritizing either environment or economy,
+                                generated via online tool on
+                                <a href=https://www.worldvaluessurvey.org/wvs.jsp>World Values Survey</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horizontal Layout for Image and Theme River Chart -->
+                <div class="row mb-4">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header">
+                                Users' interest in Ecological Topics
+                            </div>
+                            <div class="card-body">
+                                <iframe src="theme_river_chart.html"
+                                    style="width: 100%; height:680px; border: none;"></iframe>
+                                <p class='card-text'>Interest Value: Numbers represent search interest relative to the highest point on
+                                    the chart for the given region and time. A value of 100 is the peak popularity for
+                                    the term. A value of 50 means that the term is half as popular. A score of 0 means
+                                    there was not enough data for this term.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Keywords in Ecological Civilization
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <img src="images/词云.png" alt="Topic in Ecological Civilization">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Regional Attitudes to Environment Protection
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- Your map visualization code here -->
+                                        <iframe src="images/世界.png"
+                                            style="width: 100%; height: 410px; border: none;"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script>
+        // Example Theme River Chart using Chart.js (this is a placeholder, you'll need to replace it with actual theme river chart code)
+        var ctx = document.getElementById('themeRiverChart').getContext('2d');
+        var themeRiverChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [65, 59, 80, 81, 56, 55, 40],
+                    fill: true,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
