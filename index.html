@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecological Civilization Dashboard</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <style>
         body {
             padding-top: 20px;
@@ -19,6 +20,12 @@
             width: 100%;
             height: auto;
             object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .card-deck {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -38,13 +45,13 @@
                             <p class="card-text">Worldwide users' interest in five representative ecological topics over
                                 the past 12 months. Data from
                                 <a href="https://trends.google.com/trends/">Google Trends</a>
+                            </p>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Wordcloud</h5>
-                            <p class="card-text">An worldcould including keywords in Ecological Civilization, generated
-                                via
+                            <p class="card-text">A wordcloud including keywords in Ecological Civilization, generated via
                                 <a href='https://edwordle.net/'>EdWordle</a>
                             </p>
                         </div>
@@ -68,8 +75,7 @@
                                 Users' interest in Ecological Topics
                             </div>
                             <div class="card-body">
-                                <iframe src="theme_river_chart.html"
-                                    style="width: 100%; height:680px; border: none;"></iframe>
+                                <iframe src="theme_river_chart.html" style="width: 100%; height:680px; border: none;"></iframe>
                                 <p class='card-text'>Interest Value: Numbers represent search interest relative to the highest point on
                                     the chart for the given region and time. A value of 100 is the peak popularity for
                                     the term. A value of 50 means that the term is half as popular. A score of 0 means
@@ -97,9 +103,7 @@
                                         Regional Attitudes to Environment Protection
                                     </div>
                                     <div class="card-body">
-                                        <!-- Your map visualization code here -->
-                                        <iframe src="images/世界.png"
-                                            style="width: 100%; height: 410px; border: none;"></iframe>
+                                        <iframe src="images/世界.png" style="width: 100%; height: 410px; border: none;"></iframe>
                                     </div>
                                 </div>
                             </div>
